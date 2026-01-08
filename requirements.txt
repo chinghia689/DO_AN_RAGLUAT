@@ -1,0 +1,36 @@
+# --- Core AI/Data ---
+numpy
+pandas
+scikit-learn
+matplotlib
+jupyter
+tqdm
+python-dotenv
+
+# --- Deep Learning ---
+tensorflow
+tf-keras
+transformers
+torch
+torchvision
+
+# --- LangChain Ecosystem ---
+langchain
+langchain-community
+langchain-core
+langchain-text-splitters
+langchain-chroma
+langchain-google-genai
+langchain-groq
+langchain-ollama
+langchain-huggingface
+
+# --- Database & Retrieval ---
+chromadb
+rank_bm25
+sentence-transformers
+
+# --- Document Loaders ---
+unstructured
+python-docx
+pypdf
