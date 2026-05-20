@@ -10,7 +10,7 @@ services:
       dockerfile: Dockerfile
     container_name: rag-backend
     ports:
-      - "127.0.0.1:8080:8080"
+      - "127.0.0.1:8000:8000"
     environment:
       - GROQ_API_KEY=${GROQ_API_KEY}
       # - GOOGLE_API_KEY=${GOOGLE_API_KEY}
@@ -41,14 +41,7 @@ services:
     ports:
       - "127.0.0.1:3000:80"
     environment:
-      # <--- QUAN TRỌNG: Kết nối API qua tên miền
       - VITE_API_URL=https://lawchat.me/api
-    volumes:
-      # <--- THÊM: Nạp file cấu hình Nginx vừa tạo
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
-      # <--- THÊM: Nạp chứng chỉ SSL từ máy thật vào
-      - /etc/letsencrypt:/etc/letsencrypt
-      - /root/AI_polyculture/nginx/polyaqua.site.conf:/etc/nginx/conf.d/polyaqua.site.conf
     depends_on:
       - backend
     networks:
